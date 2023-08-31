@@ -2,27 +2,27 @@ import React, {useState} from 'react'
 import cars from './Cars';
 import Descritpion from './Description';
 
-function Products() {
+function Products({ productsData }) {
    
-  const [content, setContent] = useState(cars);
+  const [content, setContent] = useState("");
 
-let product
+  function handleSearchData(event){
+    const search = event.target.value
 
-  function handleData(){
-      product = cars.map((car) => (
-      <div key={car.carname}>
-        <h3>{car.carname}</h3>
-        <p>{car.description}</p>
-        <p>Price: ${car.price}</p>
-      </div>
-      
-  ))
-  console.log(product)
+    const filtered = cars.filter(car => car.carname.includes(search))
+
+    console.log(content)
+
+    search === "" ? setContent(cars) :  setContent(filtered)
+
 }
 
   return (
-    <div>
-      <button onClick={handleData}>Products</button>
+    <div id='details'>
+      <form>
+          <input type='text' placeholder='search car ....' value={content.carname} onChange={handleSearchData}/>
+          <button onSubmit={()=> productsData(content)}>Products</button>
+      </form>
       <Descritpion products={content}/>
     </div>
     

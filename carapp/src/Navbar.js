@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="navbar" style={{background:"brown", color:"#FFF", padding: "20px", display:"flex"}}>
+    <div className="navbar">
       <ul className='links'>
         <li>Home</li>
         <li>About</li>

@@ -3,7 +3,7 @@ import FordFiesta from './FordFiesta.jpg'
 import RangeRoverEvoque from './RangeRoverEvoque.jpg'
 
 const cars = [{
-    carname: "Mustang",
+    carname: "Ford-Mustang",
     description: "Very strongly built",
     price: 3000,
     image: ""
