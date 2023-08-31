@@ -4,18 +4,15 @@ import Descritpion from './Description';
 
 function Products({ productsData }) {
    
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState([]);
 
   function handleSearchData(event){
     const search = event.target.value
 
     const filtered = cars.filter(car => car.carname.includes(search))
 
-    console.log(content)
-
     search === "" ? setContent(cars) :  setContent(filtered)
-
-}
+  }
 
   return (
     <div id='details'>
@@ -23,7 +20,7 @@ function Products({ productsData }) {
           <input type='text' placeholder='search car ....' value={content.carname} onChange={handleSearchData}/>
           <button onSubmit={()=> productsData(content)}>Products</button>
       </form>
-      <Descritpion products={content}/>
+      <Descritpion filteredCars={content}/>
     </div>
     
   );
