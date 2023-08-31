@@ -9,7 +9,6 @@ function App() {
     <div style={{backgroundImage:"https://unsplash.com/photos/YApiWyp0lqo"}}>
       <Navbar />
       <Home />
-      <Descritpion />
     </div>
   );
 }

@@ -7,7 +7,6 @@ function Home() {
   return (
     <div>
         <p>This is the Homepage</p>
-
         <About />
     </div>
 

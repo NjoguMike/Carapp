@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css'
 
 function Form() {
 
@@ -21,7 +22,8 @@ function handleForm(event){
 }
 
   return (
-    <div className="FormApp" style={{margin:"20px", display:"flex", flexDirection:"column"}}>
+    <div className="App">
+    <div className='App-header'>
       <form>
         <label htmlFor='clientName'>username :</label>
           <input id='clientName' placeholder ="username" value={clientData.clientName} onChange={handleForm}/>
@@ -33,6 +35,7 @@ function handleForm(event){
           <input id='clientMessage' placeholder ="Message" value={clientData.clientMessage} onChange={handleForm}/>
         <button type="submit">Submit</button>
       </form>
+      </div>
     </div>
   );
 }
