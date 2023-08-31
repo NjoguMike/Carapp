@@ -2,8 +2,8 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div style={{background:"brown", color:"#FFF", padding: "20px", display:"flex"}}>
-      <ul>
+    <div className="navbar" style={{background:"brown", color:"#FFF", padding: "20px", display:"flex"}}>
+      <ul className='links'>
         <li>Home</li>
         <li>About</li>
         <li>Products</li>

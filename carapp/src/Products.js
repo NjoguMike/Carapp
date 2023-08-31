@@ -1,19 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import cars from './Cars';
 import Descritpion from './Description';
 
-function Products({ handleData }) {
+function Products() {
+   
+  const [content, setContent] = useState(cars);
 
-    const item = cars.map(car => car)
+let product
 
-  // function handleData(){
-
-  // }
+  function handleData(){
+      product = cars.map((car) => (
+      <div key={car.carname}>
+        <h3>{car.carname}</h3>
+        <p>{car.description}</p>
+        <p>Price: ${car.price}</p>
+      </div>
+      
+  ))
+  console.log(product)
+}
 
   return (
     <div>
-      <button>Products</button>
-      <Descritpion product={item}/>
+      <button onClick={handleData}>Products</button>
+      <Descritpion products={content}/>
     </div>
     
   );

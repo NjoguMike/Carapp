@@ -1,6 +1,23 @@
 .App {
   text-align: center;
 }
+.links {
+  list-style-type: none;
+  color: "#FFF";
+  margin: "0 10px"
+};
+
+.navbar{
+  background: "brown";
+  color: "#FFF";
+  padding: "20px";
+  display: none;  
+  justify-content: "flex-end";
+  align-items: "centre";
+  width: "80%";
+  margin: "0 auto";
+
+}
 
 .App-header {
   background-color: #282c34;
