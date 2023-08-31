@@ -4,7 +4,7 @@ import Form from './Form';
 
 function Descritpion( {filteredCars}) {
 
-  const carItem = cars.map( car => <img src={car.image} key={car.carname} alt= {`A ${car.carname}.`}/>)
+  const carItem = cars.map(car => <img src={car.image} key={car.carname} alt= {`A ${car.carname}.`}/>)
 
   
   const product = filteredCars.map((car) => (
