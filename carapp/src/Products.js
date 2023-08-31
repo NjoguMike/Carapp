@@ -16,9 +16,9 @@ function Products({ productsData }) {
 
   return (
     <div id='details'>
-      <form>
+      <form onSubmit={(e)=>{e.preventDefault(); productsData(content)}}>
           <input type='text' placeholder='search car ....' value={content.carname} onChange={handleSearchData}/>
-          <button onSubmit={()=> productsData(content)}>Products</button>
+          <button>Products</button>
       </form>
       <Descritpion filteredCars={content}/>
     </div>
