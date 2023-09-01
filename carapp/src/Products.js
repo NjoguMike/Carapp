@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import cars from './Cars';
 import Descritpion from './Description';
 
@@ -6,12 +6,18 @@ function Products({ productsData }) {
    
   const [content, setContent] = useState([]);
 
+  useEffect(
+    () => {
+      setTimeout(() => alert("ThankYou for choosing our CarApp. Hope you enjoy your stay"), 4000)
+    }
+  )
+
   function handleSearchData(event){
     const search = event.target.value
-
     const filtered = cars.filter(car => car.carname.includes(search))
 
     search === "" ? setContent(cars) :  setContent(filtered)
+
   }
 
   return (

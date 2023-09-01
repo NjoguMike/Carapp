@@ -21,7 +21,6 @@ function Descritpion( {filteredCars}) {
             <div className='image-gallery'>
               <ul className='details-card'>
                 {carItem}
-                <div><span>Picture</span></div>
               </ul>
             </div>
           <h3> Car Description </h3>
